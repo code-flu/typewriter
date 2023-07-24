@@ -1,3 +1,5 @@
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ![demo](https://github.com/code-flu/typewriter/assets/104217888/3641a963-807f-4094-80a8-7fe891c0695d)
+
 A JavaFX application that types input texts into a selected file with the line priority. Users can decide which line will type first and manage the typing speed.\
 &nbsp; &nbsp; &nbsp; &nbsp; This application helps content creators in videos or presentations. They can create typewriter-style text sequences, adding an engaging effect to their content and saving time from manual typing.
 
