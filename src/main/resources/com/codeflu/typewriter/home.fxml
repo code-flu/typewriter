@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="580.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codeflu.typewriter.HomeController">
+    <TabPane fx:id="tabPane" prefHeight="580.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab fx:id="inputTab" text="Input">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="580.0" prefWidth="600.0">
+                <TableView fx:id="inputTable" editable="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <columns>
+                            <TableColumn fx:id="lineNumber" minWidth="30.0" prefWidth="30.0" resizable="false" sortable="false" text="no." />
+                            <TableColumn fx:id="line" minWidth="500.0" prefWidth="570.0" sortable="false" text="content" />
+                        </columns>
+                        <placeholder>
+                            <Button fx:id="pasteButton" onAction="#onPasteButtonClick" text="Click to paste">
+                                <font>
+                                    <Font size="12.0" />
+                                </font></Button>
+                        </placeholder>
+                    </TableView>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Output">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <Label layoutX="89.0" layoutY="154.0" prefHeight="17.0" prefWidth="78.0" text="Typing Speed" textAlignment="CENTER" />
+                <Spinner fx:id="typingSpeed" layoutX="177.0" layoutY="149.0" prefHeight="26.0" prefWidth="100.0" />
+            <Label layoutX="105.0" layoutY="40.0" prefHeight="17.0" prefWidth="61.0" text="Output File" />
+            <TextField fx:id="outputFileField" editable="false" layoutX="177.0" layoutY="35.0" promptText="No File Selected" />
+            <Button fx:id="browseButton" layoutX="343.0" layoutY="35.0" mnemonicParsing="false" onAction="#onBrowseButtonClick" prefHeight="26.0" prefWidth="72.0" text="Browse" />
+            <Label layoutX="113.0" layoutY="76.0" prefHeight="17.0" prefWidth="53.0" text="Open File" />
+            <Label layoutX="66.0" layoutY="112.0" prefHeight="17.0" prefWidth="100.0" text="Delay Before Start" />
+            <Spinner fx:id="delayBeforeStart" layoutX="177.0" layoutY="108.0" prefHeight="25.0" prefWidth="60.0" />
+            <Hyperlink fx:id="openFileTestLink" disable="true" layoutX="177.0" layoutY="71.0" onAction="#onOpenFileTestLinkClick" text="test" textFill="#3c00ff" />
+            <Button fx:id="startTypingButton" disable="true" layoutX="177.0" layoutY="189.0" mnemonicParsing="false" onAction="#OnStartTypingButtonClick" prefHeight="26.0" prefWidth="100.0" text="Start Typing" />
+            <Label layoutX="238.0" layoutY="120.0" text="seconds">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="278.0" layoutY="161.0" text="miliseconds">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="resetTab" onSelectionChanged="#onReset" text="Reset">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </Tab>
+    </TabPane>
+</VBox>
