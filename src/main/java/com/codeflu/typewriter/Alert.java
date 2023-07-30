@@ -11,7 +11,7 @@ public interface Alert {
         alert.showAndWait();
     }
     static ButtonType confirm(String content){
-        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.ERROR);
+        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.CONFIRMATION);
         alert.setTitle("Reset Confirmation");
         alert.setHeaderText(null);
         alert.setContentText(content);
