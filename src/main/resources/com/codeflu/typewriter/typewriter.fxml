@@ -5,26 +5,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codeflu.typewriter.TypeWriterController">
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.codeflu.typewriter.TypeWriterController">
     <ToolBar>
         <items>
-            <Label text="Speed (ms):" />
-            <Spinner fx:id="typingSpeed" prefWidth="80.0" />
-            <Separator orientation="VERTICAL" />
-            <ToggleButton fx:id="reorderModeToggle" onAction="#handleToggleMode" text="🔄 Reorder Mode" />
-            <Button fx:id="startTypingButton" onAction="#handleStartTyping" text="▶ Start Simulation" />
-            <Button fx:id="stopButton" disable="true" onAction="#handleStopTyping" text="⏹ Stop" />
-            <Pane HBox.hgrow="ALWAYS" />
-            <ComboBox fx:id="languageSelector" promptText="Select Language" />
+            <Label text="Speed (ms):"/>
+            <Spinner fx:id="typingSpeed" prefWidth="80.0"/>
+            <Separator orientation="VERTICAL"/>
+            <ToggleButton fx:id="reorderModeToggle" onAction="#handleToggleMode" text="🔄 Reorder Mode"/>
+            <Button fx:id="startTypingButton" onAction="#handleStartTyping" text="▶ Start Simulation"/>
+            <Button fx:id="stopButton" disable="true" onAction="#handleStopTyping" text="⏹ Stop"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <ComboBox fx:id="languageSelector" promptText="Select Language"/>
         </items>
     </ToolBar>
     <StackPane VBox.vgrow="ALWAYS">
-        <AnchorPane fx:id="editorContainer" />
-        
+        <AnchorPane fx:id="editorContainer"/>
+
         <TableView fx:id="inputTable" visible="false">
             <columns>
-                <TableColumn fx:id="lineNumber" prefWidth="60.0" text="#" />
-                <TableColumn fx:id="lineText" prefWidth="700.0" text="Code Content" />
+                <TableColumn fx:id="lineNumber" prefWidth="60.0" text="#"/>
+                <TableColumn fx:id="lineText" prefWidth="700.0" text="Code Content"/>
             </columns>
         </TableView>
     </StackPane>

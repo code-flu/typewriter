@@ -20,7 +20,10 @@ import org.fife.ui.rtextarea.RTextScrollPane;
 import javax.swing.*;
 import java.net.URL;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -79,9 +82,9 @@ public class TypeWriterController implements Initializable {
         enableDragAndDropReordering();
 
         typingSpeed.setValueFactory(
-            new SpinnerValueFactory.IntegerSpinnerValueFactory(
-                MIN_TYPING_SPEED, MAX_TYPING_SPEED, DEFAULT_TYPING_SPEED
-            )
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(
+                        MIN_TYPING_SPEED, MAX_TYPING_SPEED, DEFAULT_TYPING_SPEED
+                )
         );
         inputTable.setItems(list);
     }
@@ -194,8 +197,8 @@ public class TypeWriterController implements Initializable {
     /**
      * Starts the priority-based simulation that types lines in user-defined order.
      *
-     * @param spatialLayout  the original spatial layout of lines (visual positions)
-     * @param priorityQueue  the lines sorted by priority (typing order)
+     * @param spatialLayout the original spatial layout of lines (visual positions)
+     * @param priorityQueue the lines sorted by priority (typing order)
      */
     private void startPrioritySimulation(List<ReorderLine> spatialLayout, List<ReorderLine> priorityQueue) {
         if (executor == null || executor.isShutdown()) {
@@ -214,9 +217,9 @@ public class TypeWriterController implements Initializable {
      * Processes the queue of lines to be typed in priority order.
      * Types lines in the order determined by priority, but in their original spatial positions.
      *
-     * @param spatialLayout  the original spatial layout (visual positions)
-     * @param queue          the priority queue of lines to type
-     * @param queueIndex     the current index in the queue
+     * @param spatialLayout the original spatial layout (visual positions)
+     * @param queue         the priority queue of lines to type
+     * @param queueIndex    the current index in the queue
      */
     private void processPriorityQueue(List<ReorderLine> spatialLayout, List<ReorderLine> queue, int queueIndex) {
         if (queueIndex >= queue.size() || executor == null || executor.isShutdown()) {
@@ -404,7 +407,7 @@ public class TypeWriterController implements Initializable {
 
                         // Validate bounds
                         if (draggedIndex >= 0 && draggedIndex < items.size() &&
-                            dropIndex >= 0 && dropIndex < items.size()) {
+                                dropIndex >= 0 && dropIndex < items.size()) {
                             ReorderLine draggedItem = items.get(draggedIndex);
                             ReorderLine droppedItem = items.get(dropIndex);
 
