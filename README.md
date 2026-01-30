@@ -7,6 +7,9 @@
 A powerful JavaFX application that types code with custom line priority ordering. Perfect for typewriter animations in
 videos and presentations.
 
+![Recording 2026-01-31 013123](https://github.com/user-attachments/assets/f3ed197a-2adb-47e2-b1ed-f1756ba611ca)
+
+
 ## 🌟 Features
 
 - **Syntax Highlighting**: Java, Python, C#, JavaScript, HTML, XML, SQL, C++
