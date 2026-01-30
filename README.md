@@ -74,7 +74,7 @@ Run com.codeflu.typewriter.Launcher
 4. Push: `git push origin feature/your-feature`
 5. Open Pull Request
 
-**Guidelines**: Add JavaDoc comments, follow Java conventions, test thoroughly.
+Before you start coding, please review our **[CONTRIBUTING.md](https://github.com/code-flu/PostFX?tab=contributing-ov-file#)**.
 
 ## 📄 License
 
