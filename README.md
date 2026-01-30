@@ -4,7 +4,11 @@
 [![JavaFX](https://img.shields.io/badge/JavaFX-25.0.2-blue?style=flat)](https://openjfx.io/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 
-A powerful JavaFX application that types code with custom line priority ordering. Perfect for typewriter animations in videos and presentations.
+A powerful JavaFX application that types code with custom line priority ordering. Perfect for typewriter animations in
+videos and presentations.
+
+![Recording 2026-01-31 013123](https://github.com/user-attachments/assets/f3ed197a-2adb-47e2-b1ed-f1756ba611ca)
+
 
 ## 🌟 Features
 
@@ -24,6 +28,7 @@ A powerful JavaFX application that types code with custom line priority ordering
 ## 🚀 Quick Start
 
 ### Build
+
 ```bash
 git clone https://github.com/code-flu/typewriter.git
 cd typewriter
@@ -31,6 +36,7 @@ mvn clean package
 ```
 
 ### Run
+
 ```bash
 # Option 1: Maven
 mvn javafx:run
@@ -74,7 +80,8 @@ Run com.codeflu.typewriter.Launcher
 4. Push: `git push origin feature/your-feature`
 5. Open Pull Request
 
-**Guidelines**: Add JavaDoc comments, follow Java conventions, test thoroughly.
+Before you start coding, please review our *
+*[CONTRIBUTING.md](https://github.com/code-flu/PostFX?tab=contributing-ov-file#)**.
 
 ## 📄 License
 
@@ -82,12 +89,12 @@ MIT License - see [LICENSE](LICENSE) file
 
 ## 🐛 Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| App won't start | Ensure Java 17+ installed: `java -version` |
-| Editor not showing | Wait for SwingNode to initialize |
-| Simulation fails | Check you're not in reorder mode, verify text exists |
-| Slow performance | Close other apps, increase typing speed |
+| Issue              | Solution                                             |
+|--------------------|------------------------------------------------------|
+| App won't start    | Ensure Java 17+ installed: `java -version`           |
+| Editor not showing | Wait for SwingNode to initialize                     |
+| Simulation fails   | Check you're not in reorder mode, verify text exists |
+| Slow performance   | Close other apps, increase typing speed              |
 
 ## 📚 Resources
 
