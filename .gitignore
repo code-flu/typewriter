@@ -1,38 +1,87 @@
+# Maven
 target/
-out/
-mvnw
-mvnw.cmd
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.backup
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
 
-### IntelliJ IDEA ###
+# IDE - IntelliJ IDEA
 .idea/
-*.iws
 *.iml
+*.iws
 *.ipr
+out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# IDE - VS Code
 .vscode/
+*.code-workspace
 
-### Mac OS ###
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# IDE - NetBeans
+nbproject/
+.nb-gradle/
+
+# Compiler
+*.class
+*.jar
+*.war
+*.ear
+
+# OS Files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.o
+*.so
+*.dll
+*.dylib
+
+# Temporary files
+*.swp
+*.swo
+*~
+.tmp
+.temp
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+mvnw.cmd
+mvnw
+
+# Gradle (if used in future)
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# Node (if frontend tools are used)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Package manager
+.npm
+.yarn
+
